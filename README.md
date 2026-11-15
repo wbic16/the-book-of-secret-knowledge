@@ -105,6 +105,7 @@ Only main chapters:
 - **[Shell One-liners](#shell-one-liners-toc)**
 - **[Shell Tricks](#shell-tricks-toc)**
 - **[Shell Functions](#shell-functions-toc)**
+- **[Exocortex and Fleets](#exocortex-and-fleets-toc)**
 
 ## :trident: &nbsp;The Book of Secret Knowledge (Chapters)
 
@@ -203,6 +204,7 @@ Only main chapters:
 &nbsp;&nbsp; <a href="https://github.com/x-way/iptables-tracer"><b>iptables-tracer</b></a> - observe the path of packets through the iptables chains.<br>
 &nbsp;&nbsp; <a href="https://github.com/proabiral/inception"><b>inception</b></a> - a highly configurable tool to check for whatever you like against any number of hosts.<br>
 &nbsp;&nbsp; <a href="https://mremoteng.org/"><b>mRemoteNG</b></a> - a fork of mRemote, multi-tabbed PuTTy on steroids!<br>
+&nbsp;&nbsp; <a href="https://tailscale.com"><b>Tailscale</b></a> - a mesh VPN built on WireGuard; every node gets a stable address in 100.64.0.0/10 - a range your NFS exports and firewall allowlists must know about, or mounts fail for no visible reason.<br>
 </p>
 
 ##### :black_small_square: Network (DNS)
@@ -362,6 +364,7 @@ Only main chapters:
 
 <p>
 &nbsp;&nbsp; <a href="https://taskwarrior.org"><b>taskwarrior</b></a> - task management system, todo list <br>
+&nbsp;&nbsp; <a href="https://github.com/ccusage/ccusage"><b>ccusage</b></a> - analyzes coding-agent token usage and cost from local session logs, by day, week, and session; the subscription dashboards themselves never denominate in tokens.<br>
 </p>
 
 ##### :black_small_square: Other
@@ -377,6 +380,8 @@ Only main chapters:
 &nbsp;&nbsp; <a href="https://github.com/tj/commander.js"><b>commander.js</b></a> - minimal CLI creator in JavaScript.<br>
 &nbsp;&nbsp; <a href="https://github.com/tomnomnom/gron"><b>gron</b></a> - make JSON greppable!<br>
 &nbsp;&nbsp; <a href="https://github.com/itchyny/bed"><b>bed</b></a> - binary editor written in Go.<br>
+&nbsp;&nbsp; <a href="https://github.com/mozilla/sccache"><b>sccache</b></a> - a compiler cache for C/C++ and Rust with shared storage backends; point a whole fleet at one cache (e.g. over NFS) and rebuilds become lookups.<br>
+&nbsp;&nbsp; <a href="https://github.com/icecc/icecream"><b>Icecream</b></a> - a distributed compiler daemon; a central scheduler farms C/C++ compilation jobs out across a cluster.<br>
 </p>
 
 #### GUI Tools &nbsp;[<sup>[TOC]</sup>](#anger-table-of-contents)
@@ -4440,3 +4445,32 @@ shell> GetASN 1.1.1.1
 shell> GetASN 0.0.0.0
 Unsuccessful ASN gathering.
 ```
+
+#### Exocortex and Fleets &nbsp;[<sup>[TOC]</sup>](#anger-table-of-contents)
+
+##### :black_small_square: Phext
+
+<p>
+&nbsp;&nbsp; <a href="https://phext.io"><b>phext</b></a> - plain text addressed in eleven dimensions: nine of address (Library.Shelf.Series/Collection.Volume.Book/Chapter.Section.Scroll) plus a 2D page of text at every address.<br>
+&nbsp;&nbsp; <a href="https://github.com/wbic16/libphext-rs"><b>libphext-rs</b></a> - the reference implementation of phext, in Rust; if a tool parses phext, it parses through this - never a hand-rolled parser.<br>
+&nbsp;&nbsp; <a href="https://github.com/wbic16/SQ"><b>SQ</b></a> - hosts phext: share a .phext file and read, write, and query its scrolls by coordinate.<br>
+&nbsp;&nbsp; <a href="https://github.com/wbic16/phext-lattice"><b>phext-lattice</b></a> - the server behind edit.phext.io; serves and edits phext, including chained (multiversal) phexts.<br>
+&nbsp;&nbsp; <a href="https://edit.phext.io"><b>edit.phext.io</b></a> - a web editor for phext, running on phext-lattice.<br>
+&nbsp;&nbsp; <a href="https://github.com/wbic16/phext-shell"><b>phext-shell</b></a> - a shell for working with phext by coordinate.<br>
+</p>
+
+##### :black_small_square: Fleet operations
+
+<p>
+&nbsp;&nbsp; <a href="https://github.com/wbic16/exocortical"><b>exocortical</b></a> - the provisioning tree for a fleet of mini-PCs: per-node setup, sccache and Icecream distributed builds over an NFS-shared cache, and a thermal law for sustained work - duty-cycle the load, never run hot.<br>
+&nbsp;&nbsp; <a href="https://github.com/wbic16/qexo"><b>qexo</b></a> - a latency-managing orchestrator for the fleet; its distributed-builds command rolls the shared compile cache out to every node.<br>
+</p>
+
+##### :black_small_square: Claims vs measurement
+
+<p>
+&nbsp;&nbsp; <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"><b>METR: measuring AI developer productivity</b></a> - a randomized trial found experienced open-source developers took 19% longer with AI tools on their own repositories, while believing they had been 20% faster.<br>
+&nbsp;&nbsp; <a href="https://arxiv.org/abs/2302.06590"><b>The Impact of AI on Developer Productivity</b></a> - the Copilot controlled experiment: with the AI pair programmer, developers finished a greenfield task 55.8% faster (Peng et al., 2023).<br>
+&nbsp;&nbsp; <a href="https://www.anthropic.com/institute/recursive-self-improvement"><b>Recursive Self-Improvement</b></a> - Anthropic reports its engineers merging 8x as much code per day as in 2024, and warns the lines-of-code figure almost certainly overstates the true gain.<br>
+&nbsp;&nbsp; <a href="https://github.com/garrytan/gstack/blob/HEAD/docs/ON_THE_LOC_CONTROVERSY.md"><b>On the LOC Controversy</b></a> - the claims side from its best-known claimant: six-figure weekly line counts, defended with the author's own deflation math.<br>
+</p>
